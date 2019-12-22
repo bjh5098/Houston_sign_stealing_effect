@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575894567670.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4951AB10",
+    "lastKnownWriteTime" : 3190304891724199271,
+    "last_content_update" : 1575894567670,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "148EC409",
+        "caption" : "hou1617",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=hou1617&cache_key=148EC409",
+        "displayedObservations" : 13,
+        "environment" : "",
+        "expression" : "hou1617",
+        "object" : "hou1617",
+        "preview" : 0,
+        "totalObservations" : 13,
+        "variables" : 10
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 13,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

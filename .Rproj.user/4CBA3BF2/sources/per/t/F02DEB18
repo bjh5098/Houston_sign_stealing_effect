@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575775274056.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "F02DEB18",
+    "lastKnownWriteTime" : 1870400627704,
+    "last_content_update" : 1575775274056,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "6023D955",
+        "caption" : "Homebarrelrate2017",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Homebarrelrate2017&cache_key=6023D955",
+        "displayedObservations" : "20",
+        "environment" : "",
+        "expression" : "Homebarrelrate2017",
+        "object" : "Homebarrelrate2017",
+        "preview" : "0",
+        "totalObservations" : "20",
+        "variables" : "4"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 8,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

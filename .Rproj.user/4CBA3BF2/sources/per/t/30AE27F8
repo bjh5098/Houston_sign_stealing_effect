@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575789516789.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "30AE27F8",
+    "lastKnownWriteTime" : 2314885530450147121,
+    "last_content_update" : 1575789516789,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "24E11221",
+        "caption" : "comparebarrelper",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=comparebarrelper&cache_key=24E11221",
+        "displayedObservations" : 19,
+        "environment" : "",
+        "expression" : "comparebarrelper",
+        "object" : "comparebarrelper",
+        "preview" : 0,
+        "totalObservations" : 19,
+        "variables" : 7
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

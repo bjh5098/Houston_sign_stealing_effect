@@ -1,0 +1,181 @@
+install.packages("ggplot2")
+
+library(ggplot2)
+
+ggplot(data=diamonds, aes(x = carat, y=price)) + geom_point(aes(colour = clarity))
+
+ggplot(data=diamonds, aes(x = carat, y=price)) + geom_point(aes(colour = clarity)) + geom_smooth()
+
+ggplot(data=diamonds, aes(x = carat, y = price, colour = clarity))+ geom_point()+ geom_smooth()
+
+####
+install.packages("ggthemes")
+library(ggthemes)
+g1 <- ggplot(data=diamonds, aes(x = carat, y = price, colour = clarity))
+g1
+g1+geom_point()
+g1+geom_point(size=2)+theme_dark()
+
+####
+##ggplotly()
+install.packages("plotly")
+library(plotly)
+inter_graph <- ggplotly(ggplot(DF,aes(x=bloodtype, fill=sex))+geom_bar(position="fill",show.legend=T))
+inter_graph
+
+library(dplyr)
+library(ggthemes)
+DF <- read.csv("example_population_f.csv")
+str(DF)
+DF_1 <- DF[,-1]#
+head(DF_1,5)
+DF_2 <- filter(DF_1, Provinces=="충청북도"|Provinces=="충청남도")
+summary(DF_2)
+
+graph <- ggplot(DF_2, aes(x=City, y= Population, fill = Provinces)) + geom_bar(stat = "identity") + theme_wsj()
+graph
+
+graph1 <- ggplot(DF_2, aes(x=reorder(City, Population), y= Population, fill = Provinces)) + geom_bar(stat = "identity") + theme_wsj()
+graph1
+
+DF_3 <- filter(DF, SexRatio > 1, PersInHou <2)
+View(DF_3)
+
+graph_SexRatio <- ggplot(DF_3, aes(x = City, y=SexRatio, fill=Provinces)) + geom_bar(stat = "identity") + theme_wsj()
+graph_SexRatio
+
+DF_4 <- mutate(DF, SexF = ifelse(SexRatio < 1, "여자비율높음", ifelse(SexRatio > 1, "남자비율높음", "남여비율같음")))
+DF_4$SexF <-factor(DF_4$SexF)
+DF_4$SexF<-ordered(DF_4$SexF, c("남자비율높음","남여비율같음","여자비율높음"))
+DF_5 <-filter(DF_4, Provinces =="서울특별시")
+graph_seoul <- ggplot(DF_5, aes(x=City, y=(SexRatio - 1), fill = SexF)) + geom_bar(stat = "identity", position = "identity") + theme_wsj()
+graph_seoul
+
+
+DF_6 <-filter(DF_4, Provinces =="경기도")
+graph_gyeongi <- ggplot(DF_6, aes(x=(SexRatio - 1), y=reorder(City,SexRatio))) + geom_segment(aes(yend=City, xend = 0), colour ="grey50") + geom_point(size=4, aes(colour = SexF)) + theme_wsj()
+graph_gyeongi  
+
+##시계열
+population <-read.csv("http://datasets.flowingdata.com/world-population.csv", sep=",", header = TRUE)
+population
+ggplot(population, aes(x=Year, y=Population)) + geom_line() + theme_economist()
+
+hot_dog <- read.csv("http://datasets.flowingdata.com/hot-dog-places.csv", sep=",", header = TRUE)
+pre_hot_dog<-t(hot_dog)
+pre_hot_dog
+eaten <- c(pre_hot_dog[ ,c(1,2,3)])
+years = rep(as.character(seq(2000,2010)), times = 3)
+ranks = rep(c(1,2,3), each = 11)
+
+final_hot_dog = data.frame(eaten, years, ranks = factor(ranks, levels = c("3","2","1"), ordered = TRUE))
+final_hot_dog
+str(final_hot_dog)
+ggplot(final_hot_dog, aes(x=years, y= eaten, fill=ranks)) + geom_histogram(stat = "identity")
+
+library(plotly)
+inter_graph <-ggplotly(ggplot(final_hot_dog, aes(x=years, y= eaten, fill=ranks)) + geom_histogram(stat = "identity"))
+inter_graph
+
+install.packages("portfolio")
+library(portfolio)
+posts <- read.csv("http://datasets.flowingdata.com/post-data.txt")
+map.market(id = posts$id, area = posts$views, group=posts$category, color=posts$comments, main="FlowingData Map")
+
+crime <- read.csv("http://datasets.flowingdata.com/crimeRatesByState2005.tsv", header = TRUE, sep="\t")
+symbols(crime$murder, crime$burglary, circles=crime$population)
+
+radius <-sqrt(crime$population/ pi)
+symbols(crime$murder, crime$burglary, circles=radius)
+
+## NBA
+
+bball <- read.csv("http://datasets.flowingdata.com/ppg2008.csv", header = TRUE)
+bball_byfgp <- bball[order(bball$FGP, decreasing = TRUE),]
+bball_byfgp
+
+bball_bypts <- bball[order(bball$PTS, decreasing = TRUE),]
+row.names(bball_bypts) <- bball_bypts$Name
+bball_bypts <- bball_bypts[,2:20]
+bball_bypts
+bball_matrix <- as.matrix(bball_bypts)
+
+bball_heatmap <- heatmap(bball_matrix, Rowv = NA, Colv= NA, col=cm.colors(10), scale="column", margins=c(5,10))
+bball_heatmap <- heatmap(bball_matrix, Rowv = NA, Colv= NA, col=heat.colors(10), scale="column", margins=c(5,10))
+
+##
+
+library(RColorBrewer)
+bball_heatmap <- heatmap(bball_matrix, Rowv = NA, Colv= NA, col=brewer.pal(9, "Blues"), scale="column", margins=c(5,10))
+
+##체르노프 페이스
+install.packages("aplpack")
+library(aplpack)
+bball <- read.csv("http://datasets.flowingdata.com/ppg2008.csv", header = TRUE)
+faces(bball_byfgp[, 2:16], ncolors = 0)
+faces(bball_byfgp[, 2:16], ncolors = 0, labels = bball_byfgp$Name)
+
+##스타 차트
+crime <- read.csv("http://datasets.flowingdata.com/crimeRatesByState-formatted.csv")
+stars(crime)
+
+crime <- read.csv("http://datasets.flowingdata.com/crimeRatesByState-formatted.csv")
+row.names(crime)<-crime$state
+crime_new <- crime[ ,2:7]
+crime_new
+stars(crime_new, flip.labels=FALSE, key.loc = c(15, 1.5))
+
+stars(crime_new, flip.labels=FALSE, key.loc = c(15, 1.5), draw.segments = TRUE)
+
+##평행좌표
+install.packages('lattice')
+library(lattice)
+education <-read.csv("http://datasets.flowingdata.com/education.csv", header = TRUE)
+head(education, 10)
+parallel(education, horizontal.axis=F, col ="#000000")
+parallel(education, horizontal.axis=F, col ="#000000")
+
+reading_colors <-c()
+for(i in 1:length(education$state)){
+  if(education$reading[i] > 523){
+    col <- "#000000"}
+  else{
+    col <- "#cccccc"}
+  reading_colors <- c(reading_colors, col)
+}
+parallel(education[, 2:7], horizontal.axis=F, col =reading_colors)
+
+
+##공간시각화
+install.packages("maps")
+library(maps)
+costcos <-read.csv("http://book.flowingdata.com/ch08/geocode/costcos-geocoded.csv", sep=",")
+View(costcos)
+
+map(database = "state")
+symbols(costcos$Longitude, costcos$Latitude, circles = rep(1, length(costcos$Longitude)), inches = 0.05, add = TRUE)
+
+map(database = "state", col = "#cccccc")
+symbols(costcos$Longitude, costcos$Latitude, bg="#e2373f", circles = rep(1, length(costcos$Longitude)), inches = 0.05, add = TRUE)
+
+map(database = "state", col = "#cccccc", regions = c("California", "Nevada", "Oregon","Washington"))
+symbols(costcos$Longitude, costcos$Latitude, bg="#e2373f", circles = rep(1, length(costcos$Longitude)), inches = 0.05, add = TRUE)
+
+
+usa <- map_data("state")
+head(usa)
+ggplot(data = usa, aes(x=long, y=lat)) + geom_polygon(aes(fill=region), colour="black")
+
+data(world.cities)
+head(world.cities)
+View(world.cities)
+usa.pop <- world.cities[world.cities$country.etc %in% "USA",]
+usa.pop
+
+class(usa.pop)
+usa.pop<-as.data.frame(usa.pop)
+
+usa.pop <- usa.pop[order(usa.pop$pop, decreasing = TRUE), ]
+usa.pop <- head(usa.pop,10)
+usa.pop <- ggplot(data = usa, aes(x=long, y=lat)) + geom_polygon(aes(fill=region), colour="black") + geom_point(data=usa.pop, aes(x=long, y=lat, size = pop), shape =16, color ="yellow", alpha = 0.4) + scale_size_area(max_size=20) + geom_text(data=usa.pop, aes(x=long+0.2, y=lat+0.2, label=name))+theme_minimal()
+

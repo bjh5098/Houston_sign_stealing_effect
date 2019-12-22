@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575728583010.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "DFC7FED9",
+    "lastKnownWriteTime" : 3472328296227680304,
+    "last_content_update" : 1575728583010,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "CE121EB5",
+        "caption" : "hou2017",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=hou2017&cache_key=CE121EB5",
+        "displayedObservations" : "23749",
+        "environment" : "",
+        "expression" : "hou2017",
+        "object" : "hou2017",
+        "preview" : "0",
+        "totalObservations" : "23749",
+        "variables" : "18"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575791087469.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "3F651104",
+    "lastKnownWriteTime" : 1575789551,
+    "last_content_update" : 1575791087469,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "DA37049D",
+        "caption" : "Comparebarrelrate2017FB",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Comparebarrelrate2017FB&cache_key=DA37049D",
+        "displayedObservations" : "13",
+        "environment" : "",
+        "expression" : "Comparebarrelrate2017FB",
+        "object" : "Comparebarrelrate2017FB",
+        "preview" : "0",
+        "totalObservations" : "13",
+        "variables" : "7"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 10,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

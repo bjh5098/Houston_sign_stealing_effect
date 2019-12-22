@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575808934175.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "870D7DCC",
+    "lastKnownWriteTime" : 1868403780760,
+    "last_content_update" : 1575808934175,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "F11295C0",
+        "caption" : "mlbHomefb",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=mlbHomefb&cache_key=F11295C0",
+        "displayedObservations" : 10045,
+        "environment" : "",
+        "expression" : "mlbHomefb",
+        "object" : "mlbHomefb",
+        "preview" : 0,
+        "totalObservations" : 10045,
+        "variables" : 18
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 12,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

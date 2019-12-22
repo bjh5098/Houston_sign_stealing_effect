@@ -1,0 +1,25 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575431761579.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4248421962",
+    "id" : "2457727B",
+    "lastKnownWriteTime" : 1575437983,
+    "last_content_update" : 1575437983977,
+    "path" : "D:/workspace/Rproject/practice/ggplot.R",
+    "project_path" : null,
+    "properties" : {
+        "cursorPosition" : "177,24",
+        "scrollLine" : "0"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

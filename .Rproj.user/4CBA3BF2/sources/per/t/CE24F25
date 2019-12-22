@@ -1,0 +1,33 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1575728807908.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CE24F25",
+    "lastKnownWriteTime" : 7957695011165139568,
+    "last_content_update" : 1575728807908,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "31B9B6D8",
+        "caption" : "Homefb",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=Homefb&cache_key=31B9B6D8",
+        "displayedObservations" : "5470",
+        "environment" : "",
+        "expression" : "Homefb",
+        "object" : "Homefb",
+        "preview" : "0",
+        "totalObservations" : "5470",
+        "variables" : "18"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}
